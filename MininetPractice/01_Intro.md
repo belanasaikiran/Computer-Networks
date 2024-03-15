@@ -2,7 +2,9 @@
 
 ## Installation
 
-> If you are using Virtual Box or Dual Booting, most likely you shouldn't any issue in installing mininet software.
+## Virtual Machine or Ubuntu(Dual Boot)
+
+> If you are using Virtual Box or Dual Booting, most likely you shouldn't facing any issue in installing mininet software. Just run the below commands on your ubuntu machine.
 
 1. Install mininet software on **Ubuntu-22.04**
 
@@ -21,8 +23,9 @@
     ```bash
     sudo apt install wireshark
     ```
+---
 
-### Using WSL - Mininet for WSL
+### Mininet in Windows Subsystem for Linux
 
 > I have setup the **mininet** and **wireshark** on WSL. **The default `microsoft-standard-wsl` kernel does not support `openvswitch`**. So, I have followed this below link to add the `openvswitch` and rebuild the existing kernel and updated it to support.
 
