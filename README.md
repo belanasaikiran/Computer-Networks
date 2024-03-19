@@ -38,6 +38,11 @@ UCONN - 5299
 
 1. Use Filters in WireShark: [https://stackoverflow.com/questions/65359167/how-to-use-filters-in-the-wireshark]
 
+2. Errors:
+
+   - Error: Network Interface not showing in WireShark
+      FIX: Run `sudo tcpdum -D` and restart wireshark.
+
 
 ### Others
 
