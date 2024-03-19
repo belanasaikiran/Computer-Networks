@@ -41,6 +41,7 @@ UCONN - 5299
 2. Errors:
 
    - Error: Network Interface not showing in WireShark
+     
       FIX: Run `sudo tcpdum -D` and restart wireshark.
 
 
