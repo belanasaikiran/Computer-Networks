@@ -1,5 +1,5 @@
 """
-Server side: open a socket on a port, listen for a message from a client,
+Server side: Open a socket on a port, listen for a message from a client,
 and send an echo reply; echoes lines until eof when client closes socket;
 spawns a thread to handle each client connection; threads share global
 memory space with main thread; this is more portable than fork: threads
