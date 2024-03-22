@@ -25,9 +25,11 @@ def handleClient(connection):                    # in spawned thread: reply
         if not data: break
         reply = 'Echo=>%s at %s' % (data, now())
         connection.send(reply.encode())
+    print("Closing Connection")
     connection.close()
 
-def dispatcher():                                # listen until process killed
+def dispatcher():     
+    print("Dispatcher Called!")                           # listen until process killed
     while True:                                  # wait for next connection,
         connection, address = sockobj.accept()   # pass to thread for service
         print('Server connected by', address, end=' ')
