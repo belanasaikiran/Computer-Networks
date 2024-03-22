@@ -26,7 +26,7 @@ def searchQuery(request):
         
         # Add all searchable words for the missing characters to query_combos
         for location in range(len(missing_query_locations)):
-                print("query combo:  ", query_combos)
+                # print("query combo:  ", query_combos)
                 if location == 0:
 
                     for alphabet in string.ascii_lowercase: # add all letters for search
