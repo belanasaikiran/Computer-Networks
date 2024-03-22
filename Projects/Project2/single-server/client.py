@@ -10,7 +10,7 @@ def requestServer():
 
     message = input("Enter the word to Check in WordList: ")
 
-    while message.lower().strip() != 'exit': #we use exit to terminate the program
+    while message.lower().strip() != 'quit': #we use exit to terminate the program
         client_socket.send(message.encode()) # send the message by encoding
 
         response = client_socket.recv(1024).decode() # we receive the response from server and decode it
