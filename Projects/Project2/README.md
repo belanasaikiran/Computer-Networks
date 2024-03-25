@@ -46,11 +46,13 @@ The server.py file is a simple TCP server that listens for incoming client conne
 
 ![single-thread-server.png](./images/single-thread-server.png)
 
-**Libraries Used:**
+### Libraries Used:
 
-1. socket - to create a socket object and bind it to a specific port.
-2. time - to get the current time stamp
-3. string - to generate all possible query combinations based on the wildcard pattern.
+1. `socket` - to create a socket object and bind it to a specific port.
+2. `time` - to get the current time stamp
+3. `string` - to generate all possible query combinations based on the wildcard pattern.
+
+### Code Functionality
 
 The server.py file mainly involves five functions in order of execution: 
 
@@ -97,7 +99,7 @@ This application is an extension of the single-threaded application with the fol
 
 ### Additional Libraries Used:
 
-1. _thread - to create and manage threads for each client connection.
+1. `_thread` - to create and manage threads for each client connection.
 
 ### Client
 
