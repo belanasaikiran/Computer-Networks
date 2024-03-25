@@ -275,6 +275,12 @@ The server creates a new thread for each client connection using the `thread.sta
 
     Solution: Implement more robust error handling mechanisms to gracefully handle errors and edge cases.
 
+### Implementation Ideas:
+
+1. [single thread](./IdeaOfImplementation/single-thread.png)
+2. [multi thread](./IdeaOfImplementation/multi-thread.png)
+
+
 ### Fixes and Improvements:
 
 https://stackoverflow.com/questions/5875177/how-to-close-a-socket-left-open-by-a-killed-program
