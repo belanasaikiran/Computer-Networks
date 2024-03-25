@@ -278,3 +278,10 @@ The server creates a new thread for each client connection using the `thread.sta
 ### Fixes and Improvements:
 
 https://stackoverflow.com/questions/5875177/how-to-close-a-socket-left-open-by-a-killed-program
+
+
+### References:
+
+1. [Python Socket Programming](https://realpython.com/python-sockets/)
+2. [Python Socket Programming - Server, Client Example](https://www.digitalocean.com/community/tutorials/python-socket-programming-server-client)
+3. Multi-Threaded Server from the given `thread-server.py` file.
