@@ -97,6 +97,7 @@ def handleClient(connection, address): # handling the request here
         no_of_responses = len(response)
 
         if no_of_responses > 0:
+            connection.send("✔️ 200 OK\n".encode())
             message = "Found " + str(no_of_responses) + " matches for " + request + " in the word list: \n"
             connection.send(message.encode())
 
@@ -107,13 +108,18 @@ def handleClient(connection, address): # handling the request here
                     connection.send("END_OF_RESPONSE".encode())
 
         else: # if response is empty, we append the message to the response
-            wordNotFound = request + " not found in word list"
+            wordNotFound = "no queries found for " + request + " in the word list\n"
             connection.send(wordNotFound.encode())
+            connection.send("❌ 404 NOT FOUND\n".encode())
             connection.send("END_OF_RESPONSE".encode())
 
         print('📨 Response for %s sent to Client %s at %s' % (request, address, now()))
 
-    connection.close()
+    connection.close() # close the connection gracefully when the request is done or connection is closed
+    print('🚪 Connection closed by Client %s at %s' % (address, now()))
+    # remove the thread from the list
+    thread.exit()
+    
 
 
 

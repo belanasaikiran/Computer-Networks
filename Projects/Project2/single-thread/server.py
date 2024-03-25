@@ -1,7 +1,6 @@
 from socket import *                     # get socket constructor and constants
 import time
 import string
-import _thread as thread
 
 myHost = ''    # server machine, '' means local host
 myPort = 50008 # assigning a random port
@@ -97,6 +96,7 @@ def handleClient(connection, address): # handling the request here
         no_of_responses = len(response)
 
         if no_of_responses > 0:
+            connection.send("✔️ 200 OK\n".encode())
             message = "Found " + str(no_of_responses) + " matches for " + request + " in the word list: \n"
             connection.send(message.encode())
 
@@ -107,13 +107,16 @@ def handleClient(connection, address): # handling the request here
                     connection.send("END_OF_RESPONSE".encode())
 
         else: # if response is empty, we append the message to the response
-            wordNotFound = request + " not found in word list"
+            wordNotFound = "no queries found for " + request + " in the word list\n"
             connection.send(wordNotFound.encode())
+            connection.send("❌ 404 NOT FOUND\n".encode())
             connection.send("END_OF_RESPONSE".encode())
 
         print('📨 Response for %s sent to Client %s at %s' % (request, address, now()))
 
     connection.close()
+    print('🚪 Connection closed by Client %s at %s' % (address, now()))
+
 
 
 
@@ -128,7 +131,7 @@ def dispatcher():
         connection, address = server_socket.accept()   
         print('💻 Client ', address,' joined ', end=' ')
         print('at', now())
-        handleClient, (connection, address)
+        handleClient(connection, address)
 
 dispatcher()
 if __name__ == '__main__':
