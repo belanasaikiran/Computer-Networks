@@ -56,8 +56,8 @@ class Final (object):
     # is going, you can use the IP header information.msg
     
     msg = of.ofp_flow_mod()
-    msg.idle_timeout = 60 #set Idle Timeout
-    msg.hard_timeout = 60 #Set Hard Timeout
+    msg.idle_timeout = 30 #set Idle Timeout
+    msg.hard_timeout = 30 #Set Hard Timeout
     msg.match = of.ofp_match.from_packet(packet)
     msg.data = packet_in
 
@@ -112,13 +112,13 @@ class Final (object):
             elif port_on_switch == 2: #incoming packet from s4
                 msgAction = of.ofp_action_output(port=1) 
                 msg.actions.append(msgAction)#send packet to h5
-                print("Packet sent to h3")
+                print("Packet sent to h5")
 
 
         elif switch_id == 4:
             if port_on_switch == 1:
             # If packet is from h4 - untrusted host, drop it.
-                if icmp == None:
+                if icmp != None:
                     self.connection.send(msg)
                     print("ICMP packet from h4 dropped")
                     return
@@ -160,8 +160,6 @@ class Final (object):
                     msgAction = of.ofp_action_output(port = 5)
                     msg.actions.append(msgAction)
                     print("Sent to host 5")
-
-
 
     self.connection.send(msg)
     return                
