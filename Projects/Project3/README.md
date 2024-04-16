@@ -24,6 +24,9 @@ We display all the hosts, switches including the untrusted host and server.
 | h4   |    s4  | Untrusted Host | 123.45.67.89 |
 | h5   |    s5  | Server | 10.5.5.50/24 |
 
+
+In all the switches, the port 2 is connected to switch 4.
+
 ---
 
 ## Pox Controller
