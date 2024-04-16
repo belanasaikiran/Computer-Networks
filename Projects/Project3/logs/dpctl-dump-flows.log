@@ -1,0 +1,146 @@
+Script started on 2024-04-15 22:23:01-04:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="106" LINES="30"]
+[34;1m  ~/.../Projects/Project3 [32;1m   main U:4 ?:6 [31;1m✗[0m [0;30m··········································································································[106G[1K[1A[23D [33;1msanju@XPS-13 [97;1m 22:23:02
+[32;1m❯ [0msudo ./project3.py
+[sudo] password for sanju: 
+Unable to contact the remote controller at 127.0.0.1:6653
+mininet> exitdpctl dump-flows > /home/sanju/dpctl.log[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+*** s1 ------------------------------------------------------------------------
+ cookie=0x0, duration=7.780s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:05,dl_dst=33:33:ff:00:00:05 actions=FLOOD
+ cookie=0x0, duration=7.702s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=e6:45:1a:c1:de:ba,dl_dst=33:33:ff:c1:de:ba actions=FLOOD
+ cookie=0x0, duration=7.684s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:01,dl_dst=33:33:ff:00:00:01 actions=FLOOD
+ cookie=0x0, duration=7.611s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.610s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=33:33:ff:00:00:02 actions=FLOOD
+ cookie=0x0, duration=7.552s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=ca:b9:f4:00:ff:70,dl_dst=33:33:ff:00:ff:70 actions=FLOOD
+ cookie=0x0, duration=7.552s, table=0, n_packets=3, n_bytes=270, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=e6:45:1a:c1:de:ba,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.524s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=12:ba:53:35:77:a9,dl_dst=33:33:ff:35:77:a9 actions=FLOOD
+ cookie=0x0, duration=7.379s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:05,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.360s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:04,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.360s, table=0, n_packets=3, n_bytes=270, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=ca:b9:f4:00:ff:70,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.340s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:03,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.203s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:01,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.201s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:04,dl_dst=33:33:ff:00:00:04 actions=FLOOD
+ cookie=0x0, duration=7.120s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=3a:3a:e7:bf:01:2e,dl_dst=33:33:ff:bf:01:2e actions=FLOOD
+ cookie=0x0, duration=7.040s, table=0, n_packets=3, n_bytes=270, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=12:ba:53:35:77:a9,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=6.959s, table=0, n_packets=3, n_bytes=270, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=3a:3a:e7:bf:01:2e,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=6.876s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:03,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.717s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:05,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.641s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:01,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.639s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=e6:45:1a:c1:de:ba,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.557s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.483s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=12:ba:53:35:77:a9,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.479s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=ca:b9:f4:00:ff:70,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.157s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:04,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.080s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=3a:3a:e7:bf:01:2e,dl_dst=33:33:00:00:00:02 actions=FLOOD
+*** s2 ------------------------------------------------------------------------
+ cookie=0x0, duration=7.787s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:05,dl_dst=33:33:ff:00:00:05 actions=FLOOD
+ cookie=0x0, duration=7.728s, table=0, n_packets=3, n_bytes=270, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=16:53:32:9c:8f:35,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.686s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:01,dl_dst=33:33:ff:00:00:01 actions=FLOOD
+ cookie=0x0, duration=7.620s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.620s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=33:33:ff:00:00:02 actions=FLOOD
+ cookie=0x0, duration=7.558s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=ca:b9:f4:00:ff:70,dl_dst=33:33:ff:00:ff:70 actions=FLOOD
+ cookie=0x0, duration=7.385s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:05,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.367s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=16:53:32:9c:8f:35,dl_dst=33:33:ff:9c:8f:35 actions=FLOOD
+ cookie=0x0, duration=7.365s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:04,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.364s, table=0, n_packets=3, n_bytes=270, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=ca:b9:f4:00:ff:70,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.346s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:03,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.205s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:04,dl_dst=33:33:ff:00:00:04 actions=FLOOD
+ cookie=0x0, duration=7.205s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:01,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.126s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=3a:3a:e7:bf:01:2e,dl_dst=33:33:ff:bf:01:2e actions=FLOOD
+ cookie=0x0, duration=6.963s, table=0, n_packets=3, n_bytes=270, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=3a:3a:e7:bf:01:2e,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=6.886s, table=0, n_packets=2, n_bytes=180, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=4e:21:8c:e6:69:a4,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=6.883s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=4e:21:8c:e6:69:a4,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.883s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:03,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.723s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:05,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.644s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:01,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.567s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.484s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=ca:b9:f4:00:ff:70,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.325s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=16:53:32:9c:8f:35,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.164s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:04,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.086s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=3a:3a:e7:bf:01:2e,dl_dst=33:33:00:00:00:02 actions=FLOOD
+*** s3 ------------------------------------------------------------------------
+ cookie=0x0, duration=7.794s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:05,dl_dst=33:33:ff:00:00:05 actions=FLOOD
+ cookie=0x0, duration=7.735s, table=0, n_packets=3, n_bytes=270, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=16:53:32:9c:8f:35,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.716s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=e6:45:1a:c1:de:ba,dl_dst=33:33:ff:c1:de:ba actions=FLOOD
+ cookie=0x0, duration=7.694s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:01,dl_dst=33:33:ff:00:00:01 actions=FLOOD
+ cookie=0x0, duration=7.625s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.625s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=33:33:ff:00:00:02 actions=FLOOD
+ cookie=0x0, duration=7.563s, table=0, n_packets=3, n_bytes=270, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=e6:45:1a:c1:de:ba,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.393s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:05,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.372s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=16:53:32:9c:8f:35,dl_dst=33:33:ff:9c:8f:35 actions=FLOOD
+ cookie=0x0, duration=7.372s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:04,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.356s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:03,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.295s, table=0, n_packets=3, n_bytes=270, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=96:2c:71:bd:6d:9e,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.214s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:04,dl_dst=33:33:ff:00:00:04 actions=FLOOD
+ cookie=0x0, duration=7.212s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:01,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.134s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=3a:3a:e7:bf:01:2e,dl_dst=33:33:ff:bf:01:2e actions=FLOOD
+ cookie=0x0, duration=7.055s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=96:2c:71:bd:6d:9e,dl_dst=33:33:ff:bd:6d:9e actions=FLOOD
+ cookie=0x0, duration=6.972s, table=0, n_packets=3, n_bytes=270, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=3a:3a:e7:bf:01:2e,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=6.894s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:03,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.731s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:05,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.651s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=e6:45:1a:c1:de:ba,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.651s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:01,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.571s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.333s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=16:53:32:9c:8f:35,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.172s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:04,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.094s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=3a:3a:e7:bf:01:2e,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.015s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=96:2c:71:bd:6d:9e,dl_dst=33:33:00:00:00:02 actions=FLOOD
+*** s4 ------------------------------------------------------------------------
+ cookie=0x0, duration=7.801s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:05,dl_dst=33:33:ff:00:00:05 actions=FLOOD
+ cookie=0x0, duration=7.742s, table=0, n_packets=3, n_bytes=270, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=16:53:32:9c:8f:35,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.723s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=e6:45:1a:c1:de:ba,dl_dst=33:33:ff:c1:de:ba actions=FLOOD
+ cookie=0x0, duration=7.701s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:01,dl_dst=33:33:ff:00:00:01 actions=FLOOD
+ cookie=0x0, duration=7.632s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.632s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=33:33:ff:00:00:02 actions=FLOOD
+ cookie=0x0, duration=7.573s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=ca:b9:f4:00:ff:70,dl_dst=33:33:ff:00:ff:70 actions=FLOOD
+ cookie=0x0, duration=7.573s, table=0, n_packets=3, n_bytes=270, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=e6:45:1a:c1:de:ba,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.400s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:05,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.382s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=16:53:32:9c:8f:35,dl_dst=33:33:ff:9c:8f:35 actions=FLOOD
+ cookie=0x0, duration=7.382s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:04,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.382s, table=0, n_packets=3, n_bytes=270, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=ca:b9:f4:00:ff:70,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.361s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:03,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.222s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:04,dl_dst=33:33:ff:00:00:04 actions=FLOOD
+ cookie=0x0, duration=7.220s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:01,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.142s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=3a:3a:e7:bf:01:2e,dl_dst=33:33:ff:bf:01:2e actions=FLOOD
+ cookie=0x0, duration=6.981s, table=0, n_packets=3, n_bytes=270, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=3a:3a:e7:bf:01:2e,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=6.897s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:03,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.738s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:05,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.660s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=e6:45:1a:c1:de:ba,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.659s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:01,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.578s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.500s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=ca:b9:f4:00:ff:70,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.340s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=16:53:32:9c:8f:35,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.180s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:04,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.101s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=3a:3a:e7:bf:01:2e,dl_dst=33:33:00:00:00:02 actions=FLOOD
+*** s5 ------------------------------------------------------------------------
+ cookie=0x0, duration=7.810s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:05,dl_dst=33:33:ff:00:00:05 actions=FLOOD
+ cookie=0x0, duration=7.747s, table=0, n_packets=3, n_bytes=270, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=16:53:32:9c:8f:35,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.728s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=e6:45:1a:c1:de:ba,dl_dst=33:33:ff:c1:de:ba actions=FLOOD
+ cookie=0x0, duration=7.707s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:01,dl_dst=33:33:ff:00:00:01 actions=FLOOD
+ cookie=0x0, duration=7.637s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.637s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=33:33:ff:00:00:02 actions=FLOOD
+ cookie=0x0, duration=7.577s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=ca:b9:f4:00:ff:70,dl_dst=33:33:ff:00:ff:70 actions=FLOOD
+ cookie=0x0, duration=7.577s, table=0, n_packets=3, n_bytes=270, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=e6:45:1a:c1:de:ba,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.439s, table=0, n_packets=3, n_bytes=270, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=82:ca:f6:8e:41:bf,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.409s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:05,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.386s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=16:53:32:9c:8f:35,dl_dst=33:33:ff:9c:8f:35 actions=FLOOD
+ cookie=0x0, duration=7.386s, table=0, n_packets=3, n_bytes=270, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=ca:b9:f4:00:ff:70,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.386s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:04,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.365s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:03,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=7.228s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=82:ca:f6:8e:41:bf,dl_dst=33:33:ff:8e:41:bf actions=FLOOD
+ cookie=0x0, duration=7.226s, table=0, n_packets=1, n_bytes=86, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:04,dl_dst=33:33:ff:00:00:04 actions=FLOOD
+ cookie=0x0, duration=7.226s, table=0, n_packets=3, n_bytes=290, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:01,dl_dst=33:33:00:00:00:16 actions=FLOOD
+ cookie=0x0, duration=6.902s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:03,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.748s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:05,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.664s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=e6:45:1a:c1:de:ba,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.663s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:01,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.583s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:02,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.503s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=ca:b9:f4:00:ff:70,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.345s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=16:53:32:9c:8f:35,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.186s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=82:ca:f6:8e:41:bf,dl_dst=33:33:00:00:00:02 actions=FLOOD
+ cookie=0x0, duration=6.184s, table=0, n_packets=2, n_bytes=140, idle_timeout=30, hard_timeout=30, ipv6,vlan_tci=0x0000,dl_src=00:00:00:00:00:04,dl_dst=33:33:00:00:00:02 actions=FLOOD
+mininet> exit
+[34;1m  ~/.../Projects/Project3 [32;1m   main U:4 ?:6 [31;1m✗[0m [0;30m··········································································································[106G[1K[1A[29D [34;1m 14s [31;1msanju@XPS-13 [97;1m 22:23:25
+[32;1m❯ [0mexit
+exit
+
+Script done on 2024-04-15 22:23:27-04:00 [COMMAND_EXIT_CODE="0"]

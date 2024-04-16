@@ -1,0 +1,19 @@
+Script started on 2024-04-15 22:25:10-04:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="106" LINES="30"]
+[34;1m  ~/.../Projects/Project3 [32;1m   main U:4 ?:6 [31;1m✗[0m [0;30m··········································································································[106G[1K[1A[23D [33;1msanju@XPS-13 [97;1m 22:25:11
+[32;1m❯ [0mscript logs/dpctl-dump-flows.log[C[C[C[14Pudo ./project3.py[C[C[4Pcat dpctl.log [C[Csudo ./project3.py
+[sudo] password for sanju: 
+Unable to contact the remote controller at 127.0.0.1:6653
+mininet> pingall
+*** Ping: testing ping reachability
+h1 -> h2 h3 X h5 
+h2 -> h1 h3 X h5 
+h3 -> h1 h2 X h5 
+h4 -> X X X X 
+h5 -> h1 h2 h3 X 
+*** Results: 40% dropped (12/20 received)
+mininet> exit
+[34;1m  ~/.../Projects/Project3 [32;1m   main U:4 ?:6 [31;1m✗[0m [0;30m··········································································································[106G[1K[1A[32D [34;1m 1m 58s [31;1msanju@XPS-13 [97;1m 22:27:12
+[32;1m❯ [0mexit
+exit
+
+Script done on 2024-04-15 22:27:14-04:00 [COMMAND_EXIT_CODE="0"]

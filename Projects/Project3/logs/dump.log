@@ -1,0 +1,23 @@
+Script started on 2024-04-15 22:29:32-04:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="106" LINES="30"]
+[34;1m  ~/.../Projects/Project3 [32;1m   main U:4 ?:6 [31;1m✗[0m [0;30m··········································································································[106G[1K[1A[23D [33;1msanju@XPS-13 [97;1m 22:29:32
+[32;1m❯ [0mscript logs/pingall.log[C[C[C[5Pudo ./project3.py
+[sudo] password for sanju: 
+Unable to contact the remote controller at 127.0.0.1:6653
+mininet> dump
+<Host h1: h1-eth0:10.1.1.10 pid=27632> 
+<Host h2: h2-eth0:10.2.2.20 pid=27634> 
+<Host h3: h3-eth0:10.3.3.30 pid=27636> 
+<Host h4: h4-eth0:123.45.67.89 pid=27638> 
+<Host h5: h5-eth0:10.5.5.50 pid=27640> 
+<OVSSwitch s1: lo:127.0.0.1,s1-eth1:None,s1-eth2:None pid=27645> 
+<OVSSwitch s2: lo:127.0.0.1,s2-eth1:None,s2-eth2:None pid=27648> 
+<OVSSwitch s3: lo:127.0.0.1,s3-eth1:None,s3-eth2:None pid=27651> 
+<OVSSwitch s4: lo:127.0.0.1,s4-eth1:None,s4-eth2:None,s4-eth3:None,s4-eth4:None,s4-eth5:None pid=27654> 
+<OVSSwitch s5: lo:127.0.0.1,s5-eth1:None,s5-eth2:None pid=27657> 
+<RemoteController c0: 127.0.0.1:6633 pid=27624> 
+mininet> exit
+[34;1m  ~/.../Projects/Project3 [32;1m   main U:4 ?:6 [31;1m✗[0m [0;30m··········································································································[106G[1K[1A[29D [34;1m 13s [31;1msanju@XPS-13 [97;1m 22:29:48
+[32;1m❯ [0mexit
+exit
+
+Script done on 2024-04-15 22:29:49-04:00 [COMMAND_EXIT_CODE="0"]
