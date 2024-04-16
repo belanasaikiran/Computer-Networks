@@ -3,7 +3,7 @@
 In this project, we will implement routing between devices on different subnets, and implementing firewalls for certain subnets. The idea is to simulate an actual production network. We will be using ideas from project 1 to help construct the Mininet topology, and then implement the rules allowing for traffic to flow through your
 network.
 
-> All outputs are stored in a folder called `logs`
+> All outputs are stored in a folder called `logs`. To see the output, run `cat name_of_log_file.log` in your linux terminal.
 
 ## Mininet Topology
 
@@ -18,9 +18,9 @@ We display all the hosts, switches including the untrusted host and server.
 
 | Host | Switch | Device | IP Address |
 | ---- | ------ | -----  | ---------  |
-| h1   |   s1   | Floor 1 | 10.1.1.10/24 |
-| h2   | s2     | Floor 2 | 10.2.2.20/24 |
-| h3   |   s3   | Floor 3 | 10.3.3.30/24 |
+| h1   |   s1   | Floor 1 Host | 10.1.1.10/24 |
+| h2   | s2     | Floor 2 Host | 10.2.2.20/24 |
+| h3   |   s3   | Floor 3 Host | 10.3.3.30/24 |
 | h4   |    s4  | Untrusted Host | 123.45.67.89 |
 | h5   |    s5  | Server | 10.5.5.50/24 |
 

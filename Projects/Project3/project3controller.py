@@ -63,103 +63,115 @@ class Final (object):
 
 
     #Let's set packet type boolean variables
-    ip = packet.find('ipv4')
-    icmp = packet.find('icmp')
+    ip = packet.find('ipv4') 
+    icmp = packet.find('icmp') 
 
-    # and print the packet here
-    if ip is None:
-        msgAction = of.ofp_action_output(port = of.OFPP_FLOOD)
-        msg.actions.append(msgAction)
+
+    # Handle cases where no IP packet is detected
+    if ip == None: # Check if there is no IPv4 packet in the incoming data
+        msgAction = of.ofp_action_output(port = of.OFPP_FLOOD)  # Create an action to flood the packet
+        msg.actions.append(msgAction)  # Append the flooding action to the action list of the message
         #print('non IP, flooded')
 
     else:
-        # The packet is an IP packet
-        if switch_id == 1:
-            if port_on_switch == 1: #coming from h1
-                msgAction = of.ofp_action_output(port=2) #send the packet to s4 switch
-                msg.actions.append(msgAction)
+        # Handling when the packet contains IP data
+        if switch_id == 1:  # If the packet is being handled by switch 1
+            if port_on_switch == 1:  # If the packet comes from port 1 (from h1)
+                msgAction = of.ofp_action_output(port=2)  # Create an action to forward the packet to port 2 (to s4)
+                msg.actions.append(msgAction)  # Append the forwarding action to the message
                 print("packet sent to S4")
-            elif port_on_switch == 2: #packet coming from s4
-                msgAction = of.ofp_action_output(port=1)
+            elif port_on_switch == 2:  # If the packet comes from port 2 (from s4)
+                msgAction = of.ofp_action_output(port=1)  # Create an action to forward the packet to port 1 (back to h1)
                 msg.actions.append(msgAction)
                 print("Packet sent to h1")
 
-        elif switch_id == 2: 
-            if port_on_switch == 1: #packet coming from h2
-                msgAction = of.ofp_action_output(port=2)
+        elif switch_id == 2:  # If the packet is being handled by switch 2
+            if port_on_switch == 1:  # If the packet comes from port 1 (from h2)
+                msgAction = of.ofp_action_output(port=2)  # Create an action to forward the packet to port 2 (to s4)
                 msg.actions.append(msgAction)
                 print("Packet sent to s4")
-            elif port_on_switch == 2: #incoming packet from s4
-                msgAction = of.ofp_action_output(port=1)
+            elif port_on_switch == 2:  # If the packet comes from port 2 (from s4)
+                msgAction = of.ofp_action_output(port=1)  # Create an action to forward the packet to port 1 (back to h2)
                 msg.actions.append(msgAction)
                 print("Packet sent to h2")
 
-        elif switch_id == 3:
-            if port_on_switch == 1: #incoming packet from h3
-                msgAction = of.ofp_action_output(port=2)
+        elif switch_id == 3:  # If the packet is being handled by switch 3
+            if port_on_switch == 1:  # If the packet comes from port 1 (from h3)
+                msgAction = of.ofp_action_output(port=2)  # Create an action to forward the packet to port 2 (to s4)
                 msg.actions.append(msgAction)
                 print("Packet send to s4")
-            elif port_on_switch == 2: #incoming packet from s4
-                msgAction = of.ofp_action_output(port=1) 
-                msg.actions.append(msgAction)#send packet to h3
+            elif port_on_switch == 2:  # If the packet comes from port 2 (from s4)
+                msgAction = of.ofp_action_output(port=1)  # Create an action to forward the packet to port 1 (back to h3)
+                msg.actions.append(msgAction)
                 print("Packet sent to h3")
 
-        elif switch_id == 5:
-            if port_on_switch == 1: #incoming packet form h5
-                msgAction = of.ofp_action_output(port=2) #send to s4
+        elif switch_id == 5:  # If the packet is being handled by switch 5
+            if port_on_switch == 1:  # If the packet comes from port 1 (from h5)
+                msgAction = of.ofp_action_output(port=2)  # Create an action to forward the packet to port 2 (to s4)
                 msg.actions.append(msgAction)
                 print("Packet sent to s5")
-            elif port_on_switch == 2: #incoming packet from s4
-                msgAction = of.ofp_action_output(port=1) 
-                msg.actions.append(msgAction)#send packet to h5
+            elif port_on_switch == 2:  # If the packet comes from port 2 (from s4)
+                msgAction = of.ofp_action_output(port=1)  # Create an action to forward the packet to port 1 (back to h5)
+                msg.actions.append(msgAction)
                 print("Packet sent to h5")
 
 
-        elif switch_id == 4:
-            if port_on_switch == 1:
-            # If packet is from h4 - untrusted host, drop it.
+        
+        elif switch_id == 4:  # Check if the current switch ID is 4.
+            # If packet is from h4 - untrusted host, drop it. We block all the traffic coming from h4 (untrusted host) to our server h5
+            if port_on_switch == 1:  # Check if the packet came from port 1.
+                # Check if the packet is ICMP and drop it if coming from h4 (untrusted host). We can test it with the `pingall` command in mininet environment.
                 if icmp != None:
                     self.connection.send(msg)
                     print("ICMP packet from h4 dropped")
                     return
-                elif ip.dstip == '10.5.5.50': #drop the IP packet from h4 to h5
+                # Drop IP packets directed to h5 from h4.
+                elif ip.dstip == '10.5.5.50':
                     self.connection.send(msg)
                     print("ICMP packet from h4 to h5 dropped")
                     return
-                elif ip.dstip == '10.1.1.10': #forward to h1
+                # Forward IP packets destined for h1.
+                elif ip.dstip == '10.1.1.10':
                     msgAction = of.ofp_action_output(port=2)
                     msg.actions.append(msgAction)
                     print('Sent to Host 1')
-                elif ip.dstip == '10.2.2.20': #forward to h2
+                # Forward IP packets destined for h2.
+                elif ip.dstip == '10.2.2.20':
                     msgAction = of.ofp_action_output(port=3)
                     msg.actions.append(msgAction)
                     print("sent to host 2")
-                elif ip.dstip == '10.3.3.30': #forward packet to h3
+                # Forward IP packets destined for h3.
+                elif ip.dstip == '10.3.3.30':
                     msgAction = of.ofp_action_output(port=4)
                     msg.actions.append(msgAction)
                     print("sent to host 3")
-
-            else: 
-                if ip.dstip == '123.45.67.89': #forward to h4
+            else:  # If the packet came from any port other than 1.
+                # Forward packets with a specific destination IP to h4.
+                if ip.dstip == '123.45.67.89':
                     msgAction = of.ofp_action_output(port = 1)
                     msg.actions.append(msgAction)
                     print("Sent to host 4")
-                elif ip.dstip == '10.1.1.10': #forward to h1
+                # Forward packets destined for h1.
+                elif ip.dstip == '10.1.1.10':
                     msgAction = of.ofp_action_output(port = 2)
                     msg.actions.append(msgAction)
                     print("Sent to host 1")
-                elif ip.dstip == '10.2.2.20': #forward to h2
+                # Forward packets destined for h2.
+                elif ip.dstip == '10.2.2.20':
                     msgAction = of.ofp_action_output(port = 3)
                     msg.actions.append(msgAction)
                     print("Sent to host 2")
-                elif ip.dstip == '10.3.3.30': #forward to h3
+                # Forward packets destined for h3.
+                elif ip.dstip == '10.3.3.30':
                     msgAction = of.ofp_action_output(port = 4)
                     msg.actions.append(msgAction)
                     print("Sent to host 3")
-                elif ip.dstip == '10.5.5.50': #forward to h5
+                # Forward packets destined for h5.
+                elif ip.dstip == '10.5.5.50':
                     msgAction = of.ofp_action_output(port = 5)
                     msg.actions.append(msgAction)
                     print("Sent to host 5")
+
 
     self.connection.send(msg)
     return                

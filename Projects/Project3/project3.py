@@ -9,11 +9,6 @@ from mininet.node import RemoteController
 
 class final_topo(Topo):
   def build(self):
-    # Examples!
-    # Create a host with a default route of the ethernet interface. You'll need to set the
-    # default gateway like this for every host you make on this assignment to make sure all 
-    # packets are sent out that port. Make sure to change the h# in the defaultRoute area
-    # and the MAC address when you add more hosts!
 
     # Create 5 switches.
     s1 = self.addSwitch('s1')
