@@ -14,11 +14,11 @@ class final_topo(Topo):
     # default gateway like this for every host you make on this assignment to make sure all 
     # packets are sent out that port. Make sure to change the h# in the defaultRoute area
     # and the MAC address when you add more hosts!
-    h1 = self.addHost('h1',mac='00:00:00:00:00:01',ip='1.1.1.1/24', defaultRoute="h1-eth0")
-    h2 = self.addHost('h2',mac='00:00:00:00:00:02',ip='2.2.2.2/24', defaultRoute="h2-eth0")
+    # h1 = self.addHost('h1',mac='00:00:00:00:00:01',ip='1.1.1.1/24', defaultRoute="h1-eth0")
+    # h2 = self.addHost('h2',mac='00:00:00:00:00:02',ip='2.2.2.2/24', defaultRoute="h2-eth0")
 
     # Create a switch.
-    s1 = self.addSwitch('s1')
+    # s1 = self.addSwitch('s1')
 
     # Connect Port 8 on the Switch to Port 0 on Host 1 and Port 9 on the Switch to Port 0 on 
     # Host 2. This is representing the physical port on the switch or host that you are 
@@ -31,14 +31,14 @@ class final_topo(Topo):
     #   set as the default route when you created the device above. Usually, this means you 
     #   should plug in to port 0 (since you set the default route to h#-eth0).
     #
-    self.addLink(s1,h1, port1=8, port2=0)
-    self.addLink(s1,h2, port1=9, port2=0)
+    # self.addLink(s1,h1, port1=8, port2=0)
+    # self.addLink(s1,h2, port1=9, port2=0)
 
     print("Delete me!")
 
 def configure():
   topo = final_topo()
-  net = Mininet(topo=topo, controller=RemoteController('c0', ip='127.0.0.1', protocol='tcp', port=6633))
+  net = Mininet(topo=topo, controller=RemoteController)
   net.start()
 
   CLI(net)

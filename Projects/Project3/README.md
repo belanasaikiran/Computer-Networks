@@ -3,9 +3,13 @@
 In this project, we will implement routing between devices on different subnets, and implementing firewalls for certain subnets. The idea is to simulate an actual production network. We will be using ideas from project 1 to help construct the Mininet topology, and then implement the rules allowing for traffic to flow through your
 network.
 
+> All outputs are stored in a folder called `logs`
+
 ## Mininet Topology
 
 ### `dump`
+
+Log File: [dump.log](./logs/dump.log)
 
 ![Mininet Topology](./images/dump.png)
 
@@ -26,6 +30,8 @@ We display all the hosts, switches including the untrusted host and server.
 
 ### `pingall`
 
+Log File: [pingall.log](./logs/pingall.log)
+
 ![PingAll](./images/pingall.png)
 
 `pingall` command shows the status of all hosts pinging each other in the network. 
@@ -34,6 +40,8 @@ Since `h4` host is an untrusted host, we block all the `ICMP` traffic passing th
 
 
 ### `iperf`
+
+Log File: [iperf.log](./logs/iperf.log)
 
 In this section, we see the `h4`, untrusted network, cannot send ANY traffic to Server but can send traffic to all other hosts except `ICMP` messages.
 
@@ -65,4 +73,13 @@ In this section, we see the `h4`, untrusted network, cannot send ANY traffic to 
 
 ### `dpctl dump-flows`
 
-![dpctl dump flows](./images/dpctl_dump_flows.png)
+Log file: [dpctl-dump-flows.log](./logs/dpctl-dump-flows.log)
+
+Attaching the screenshots for the output for `dpctl dump-flows` command. A detailed output as been saved to a log file called [dcptl-dump-flows.log](./logs/dpctl-dump-flows.log). This log can be called with `cat ./logs/dpctl-dump-flows.log` in bash shell.
+
+![dpctl dump flows](./images/dpctl_dump_flows_1.png)
+![dpctl dump flows](./images/dpctl_dump_flows_2.png)
+![dpctl dump flows](./images/dpctl_dump_flows_3.png)
+![dpctl dump flows](./images/dpctl_dump_flows_4.png)
+![dpctl dump flows](./images/dpctl_dump_flows_5.png)
+![dpctl dump flows](./images/dpctl_dump_flows_6.png)

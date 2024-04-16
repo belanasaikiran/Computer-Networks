@@ -37,7 +37,7 @@ class final_topo(Topo):
     self.addLink(h4,s4,port1=0, port2=1)
     self.addLink(h5,s5,port1=0, port2=1)
 
-    #Linking the switches to each other as mentioned in the figure
+    #Linking the switches to each other as mentioned in the given figure
     self.addLink(s1,s4,port1=2, port2=2)
     self.addLink(s2,s4,port1=2, port2=3)
     self.addLink(s3,s4,port1=2, port2=4)
@@ -46,7 +46,8 @@ class final_topo(Topo):
 
 def configure():
   topo = final_topo()
-  net = Mininet(topo=topo, controller=RemoteController('c0', ip='127.0.0.1', protocol='tcp', port=6633))
+  # net = Mininet(topo=topo, controller=RemoteController('c0', ip='127.0.0.1', protocol='tcp', port=6633)) #ideal way of implementation since the pox is running at port `6633`.
+  net = Mininet(topo=topo, controller=RemoteController) # I use this since the command `dpctl dump-flows` works with this mode only. Could be the pox controller's issue ?
   net.start()
 
   CLI(net)
