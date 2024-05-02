@@ -1,6 +1,6 @@
-# Computer-Networks-and-Data-Communications
+# Computer-Networks
 
-UCONN - 5299
+Course No: 5299
 
 ## Mininet Installation, Setup and Usage.
 
